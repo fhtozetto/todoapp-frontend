@@ -5,15 +5,15 @@ const rootReducer = combineReducers({
         descripition: 'Ler Livro',
         list: [{
             _id: 1,
-            descripition: 'Pagar fatura do cartão',
+            description: 'Pagar fatura do cartão',
             done: true
         }, {
             _id: 2,
-            descripition: 'Reunião com a equipe ás 10:00',
+            description: 'Reunião com a equipe ás 10:00',
             done: false
         }, {
             _id: 3,
-            descripition: 'Consulta médica na terça depois do almoço',
+            description: 'Consulta médica na terça depois do almoço',
             done: true
         }]
     })
