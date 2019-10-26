@@ -12,7 +12,7 @@ class TodoFrom extends Component {
         this.keyHandle = this.keyHandle.bind(this)
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.props.search()
     }
 
@@ -27,24 +27,24 @@ class TodoFrom extends Component {
     render() {
         return (
             <div role='form' className='todoForm'>
-            
-            <Grid cols='12 9 10'>
-                <input id='description' 
-                    className='form-control' 
-                    onChange={this.props.changeDescription}
-                    onKeyUp={this.keyHandle}
-                    placeholder='Adicione uma tarefa' 
-                    value={this.props.description} >
-                </input>
-            </Grid>
-    
-            <Grid cols='12 3 2'>
-                <IconButton style='primary' icon='plus' onClick={this.props.handleAdd}></IconButton>
-                <IconButton style='info' icon='search' onClick={this.props.handleSearch}></IconButton>
-                <IconButton style='default' icon='close' onClick={this.props.handleClear}></IconButton>
-            </Grid>
-    
-        </div>
+                
+                <Grid cols='12 9 10'>
+                    <input id='description' 
+                        className='form-control' 
+                        onChange={this.props.changeDescription}
+                        onKeyUp={this.keyHandle}
+                        placeholder='Adicione uma tarefa' 
+                        value={this.props.description} >
+                    </input>
+                </Grid>
+        
+                <Grid cols='12 3 2'>
+                    <IconButton style='primary' icon='plus' onClick={this.props.handleAdd}></IconButton>
+                    <IconButton style='info' icon='search' onClick={this.props.handleSearch}></IconButton>
+                    <IconButton style='default' icon='close' onClick={this.props.handleClear}></IconButton>
+                </Grid>
+        
+            </div>
         )
     }
 }
